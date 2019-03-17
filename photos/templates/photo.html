@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% block content %} 
+{{ block.super}}
+
+<div class="container">
+    <div class="row">
+  <!-- Looping through news   -->
+        <div class="col">
+            <img class="card-img-top" src="{{image.image.url}}" alt="{{image.title}}">
+        </div>
+        <div class="col">
+            <h5 class="card-title">{{image.title}}</h5>
+            <p class="card-text">{{image.description}}</p>
+            <p class="card-text"><small class="text-muted">{{image.pub_date}}</small></p>
+            <a href="{% url 'get_link' image.id%}">Get Image Link</a>
+        </div>
+        
+        </div>
+  </div>
+</div>
+
+{% endblock %}

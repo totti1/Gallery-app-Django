@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <i class="ionicon ionicon-home"></i>
+            <a class="navbar-brand" style="font-weight: 800;" href="{% url 'home' %}">Photo Gallery</a>
+        </div>
+
+        <!-- Adding a search form  -->
+        <div class="col-sm-4 col-md-4 navbar-right">
+            <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="What are you looking for" name="title">
+                    <button class="btn btn-outline-light btn-sm" type="submit" style="margin-left:15px">Search</button>
+                </div>
+            </form>
+        </div>
+        <a href="/admin" style="color: white">Login</a>
+      <!-- search form end -->
+    </div>
+</nav>
+</body>
+</html>
